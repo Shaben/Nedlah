@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <script type="text/javascript" src="binaryajax.js"></script>
+        <script type="text/javascript" src="exif.js"></script>
+        
+    </head>
+    <body>
+     
+        <script>
+        //document.getElementById('file-input').onchange = function(e) {
+        //    stufff(e);
+        //}
+        
+        function stufff(e)
+        {
+            
+            var ladlon = new Array();
+            
+            EXIF.getData(
+                         e.target.files[0], function() {
+                         alert(EXIF.pretty(this));
+                         
+                         var lad = EXIF.getTag(this,"GPSLatitude");
+                         var lon = EXIF.getTag(this,"GPSLongitude");
+                         var ladref = EXIF.getTag(this,"GPSLatitudeRef");
+                         var lonref = EXIF.getTag(this,"GPSLongitudeRef");
+                         
+                         alert("LAD " + lad + " "+ladref +
+                               " and LON " +lon + " " + lonref
+                               );
+                         
+                         
+                         //var ladlon = new Array();
+                         ladlon[0] = lad + ";" + ladref;
+                         ladlon[1] = lon + ";" + lonref;
+                         
+                         
+                                                  }
+                         );
+                         
+                         var gpscoords = function(ladlon) {
+                             var gpscoords = new Array();
+                             var gpsexifA = new Array();
+                             var gpsexifB = new Array();
+                             
+                             var a = exifcoords[0].split(";");
+                             var b = exifcoords[1].split(";");
+                             
+                             var polarityLat = (a[3] == "N"? 1:-1);
+                             var polarityLon = (b[3] == "E"? 1:-1);
+                             
+                             gpsexifA[0] = parseint(a[0]) * polarityLat;
+                             gpsexifB[0] = parseint(b[0]) * polarityLon;
+                             
+                             gpsexifA[1] = (parseint(a[1]))+ "'";
+                             gpsexifB[1] = (parseint(b[1]))+ "'";
+                             
+                             gpsexifA[2] = (Math.round(parseint(a[2])*100)/100) + "''";
+                             gpsexifB[2] = (Math.round(parseint(b[2])*100)/100) + "''";
+                             
+                             
+                             gpscoords[0] = gpsexifA;
+                             gpscoords[1] = gpsexifB;
+                             
+                             return gpscoords;
+                         };
+                         var gA = gpscoords[0];
+                         var gB = gpscoords[1];
+            
+            var LAT  = gA[0] +" "+ gA[1] +" "+ gA[2];
+            var LON  = gB[0] +" "+ gB[1] +" "+ gB[2];
+                         
+                         
+            alert( "LAT: " +LAT +", LON"+ LON);
+                         
+            //NE +
+            //SW -
+            
+            mapinit(LAT, LON);
+                         
+
+
+        }
+        
+       // function ladlon(exifcoords)
+       
+            //<![CDATA[
+            
+            function mapinit()
+            {
+                var map = new google.maps.Map(document.getElementById("map"), {
+                                              zoom: 17,
+                                              center: new google.maps.LatLng(41.889857, 12.486212),
+                                              mapTypeId: google.maps.MapTypeId.HYBRID,
+                                              });
+                                              
+                                              new google.maps.Marker({
+                                                                     flat: false,
+                                                                     icon: "http://maps.google.com/mapfiles/arrow.png",
+                                                                     map: map,
+                                                                     position: new google.maps.LatLng(41.889857,12.486212),
+                                                                     shadow: "http://maps.google.com/mapfiles/arrowshadow.png",
+                                                                     visible: true,
+                                                                     });
+            }
+        google.maps.event.addDomListener(window, 'load', mapinit);
+        
+        
+        //]]>
+            </script>
+        Upload a local file to read Exif data.
+        <br/>
+        <input id="file-input" type="file" onchange="stufff(event)"/>
+        <br/><br/>
+        
+        Click the images to read Exif data. The first image tests reading single tags, while the other two simply show all available data.
+        <br/><br/>
+        <img src="/DSCN0614_small.jpg" id="img1" />
+        <br/>
+        <img src="/Bush-dog.jpg" id="img2" />
+        <br/>
+        <img src="/dsc_09827.jpg" id="img3" /><br/>
+        
+        <table><tr><td>
+            check a file on the web...
+            <form style='border: 1px solid gray; padding: 5px' action='exif.cgi'>Image <b>URL</b>: <input name='imgurl' size='30'/>
+                &nbsp;&nbsp;&nbsp; <input  style='font-size: 80%'  type='submit' value='View Image At Url'/>
+            </form>
+        </td></tr></table>
+        
+    </body>
+</html>
