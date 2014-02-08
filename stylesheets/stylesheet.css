@@ -1,3 +1,43 @@
 body {
-	color: purple;
+	box-sizeing: border-box;
+	-moz-box-sizing:border-box;
+}
+
+nav {
+	width: 600px;
+	font-size: 16px;
+	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+nav p {
+	font-size: 16px;
+	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+p {
+	font-family:
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+h3 {
+	font-szie: 28px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 20px;
+}
+
+h6 {
+	font-szie: 18px;
 }
