@@ -50,6 +50,11 @@ nav p {
 	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
+div #about_wrapper {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 section #about {
 	margin-left = auto;
 	margin-right = auto;
