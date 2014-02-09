@@ -38,8 +38,6 @@ div #header_wrap {
 	margin-right: auto;
 }
 nav {
-	border-width: 20px;
-	border-color: white;
 	background-color: #3fa449;
 	font-size: 16px;
 	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
@@ -51,12 +49,16 @@ nav p {
 }
 
 div #about_wrapper {
+	height: 300px;
+	width: 250px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 section #about {
-	margin-left = auto;
-	margin-right = auto;
 	
+}
+
+section #about p {
+	background-color: #a2b8bd;
 }
