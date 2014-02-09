@@ -1,6 +1,7 @@
 body {
 	box-sizeing: border-box;
 	-moz-box-sizing:border-box;
+	background-color: #c480c0;
 }
 
 p {
@@ -35,7 +36,7 @@ div #header_wrap {
 	width: 600px;
 }
 nav {
-	border-width: 2px;
+	border-width: 5px;
 	border-color: white;
 	background-color: #3fa449;
 	font-size: 16px;
