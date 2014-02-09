@@ -35,6 +35,8 @@ div #header_wrap {
 	width: 600px;
 }
 nav {
+	border-width: 2px;
+	border-color: white;
 	background-color: #3fa449;
 	font-size: 16px;
 	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
