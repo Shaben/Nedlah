@@ -38,9 +38,14 @@ div #header_wrap {
 	margin-right: 0px;
 }
 
-div h2, a{
+div h2 {
 	text-align: center;
 }
+
+div a {
+	text-align: center;
+}
+
 nav {
 	background-color: #3fa449;
 	border-style: solid;
