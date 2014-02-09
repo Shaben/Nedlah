@@ -38,7 +38,7 @@ div #header_wrap {
 	margin-right: 0px;
 }
 
-div h1, h2, a{
+div h2, a{
 	text-align: center;
 }
 nav {
@@ -60,10 +60,11 @@ div #about_wrapper {
 	width: 250px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #a2b8bd;
 }
 
 section #about {
-	
+	background-color: #a2b8bd;
 }
 
 section #about p {
