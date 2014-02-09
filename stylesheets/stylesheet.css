@@ -34,7 +34,6 @@ h6 {
 }
 
 div #header_wrap {
-	text-align: center;
 	margin-left: 0px;
 	margin-right: 0px;
 }
@@ -43,6 +42,7 @@ nav {
 	border-style: solid;
 	border-width: 4px;
 	border-color: black;
+	text-align: center;
 	font-size: 16px;
 	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
