@@ -16,7 +16,7 @@ h2 {
 }
 
 h3 {
-	font-szie: 28px;
+	font-size: 28px;
 }
 
 h4 {
@@ -33,10 +33,11 @@ h6 {
 
 div #header_wrap {
 	width: 600px;
-	background-color: #3fa449;
+	
 }
 nav {
 	width: 600px;
+	color: #3fa449;
 	font-size: 16px;
 	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
