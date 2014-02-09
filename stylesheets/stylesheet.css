@@ -34,11 +34,11 @@ h6 {
 }
 
 div #header_wrap {
-	width: 600px;
+	text-align: center;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 nav {
-	width:
-	margin-left: auto;
 	background-color: #3fa449;
 	border-style: solid;
 	border-width: 4px;
