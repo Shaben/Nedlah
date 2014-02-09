@@ -38,7 +38,7 @@ div #header_wrap {
 	margin-right: 0px;
 }
 
-nav .inner a, h2 {
+nav .inner a#forkme_banner, h2 {
 	text-align: center;
 }
 
