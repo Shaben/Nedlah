@@ -31,12 +31,12 @@ h6 {
 	font-szie: 18px;
 }
 
-div #headerwrap{
-	width: 600px;
-	background-color:#3fa449;
+div #header_wrap {
+	width 600px;
+	background-color: #3fa449;
 }
 nav {
-	width: 400px;
+	width: 600px;
 	font-size: 16px;
 	font-family: "Myriad", Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
